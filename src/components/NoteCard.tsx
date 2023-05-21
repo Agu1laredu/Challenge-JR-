@@ -27,19 +27,41 @@ export default function NoteCard({ note, onArchved, onDelete, onEdit }: Props) {
           marginLeft: "20%",
         }}
       >
-        <button className="nes-btn" onClick={() => onArchved(note.id)}>
+        <button
+          className="nes-btn"
+          onClick={() => onArchved(note.id)}
+          style={{
+            border: "1px solid black",
+            padding: 10,
+            width: 100,
+            borderRadius: 15,
+            cursor: "pointer",
+          }}
+        >
           Archivar
         </button>
         <button
           className="nes-btn"
-          style={{ marginLeft: "10px" }}
+          style={{
+            border: "1px solid black",
+            padding: 10,
+            width: 100,
+            borderRadius: 15,
+            cursor: "pointer",
+          }}
           onClick={() => onEdit(note)}
         >
           Editar
         </button>
         <button
           className="nes-btn"
-          style={{ marginLeft: "10px" }}
+          style={{
+            border: "1px solid black",
+            padding: 10,
+            width: 100,
+            borderRadius: 15,
+            cursor: "pointer",
+          }}
           onClick={() => onDelete(note.id)}
         >
           Eliminar

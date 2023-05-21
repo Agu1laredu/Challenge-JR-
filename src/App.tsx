@@ -42,18 +42,44 @@ function NoteModal({ note, onClose, onChange, onSave }: NoteModalProps) {
       >
         <h1 className="title">Create/ Edit Note</h1>
         <div className="nes-field">
-          <label htmlFor="title">Title</label>
+          <label
+            htmlFor="title"
+            style={{
+              fontSize: 30,
+            }}
+          >
+            Title
+          </label>
           <input
             onChange={(event) => onChange("title", event.target.value)}
             value={note.tittle}
             type="text"
             id="title"
             className="nes-input"
+            style={{
+              border: "1px solid black",
+              padding: 10,
+              width: "90%",
+              margin: "auto",
+            }}
           />
         </div>
         <div className="nes-field">
-          <label htmlFor="content">Content</label>
+          <label
+            htmlFor="content"
+            style={{
+              fontSize: 30,
+            }}
+          >
+            Content
+          </label>
           <textarea
+            style={{
+              border: "1px solid black",
+              padding: 10,
+              width: "90%",
+              margin: "auto",
+            }}
             onChange={(event) => onChange("content", event.target.value)}
             value={note.content}
             className="nes-textarea"
@@ -69,10 +95,30 @@ function NoteModal({ note, onClose, onChange, onSave }: NoteModalProps) {
             justifyContent: "space-between",
           }}
         >
-          <button className="nes-btn" onClick={onClose}>
+          <button
+            className="nes-btn"
+            onClick={onClose}
+            style={{
+              border: "1px solid black",
+              padding: 10,
+              width: 100,
+              borderRadius: 15,
+              cursor: "pointer",
+            }}
+          >
             close
           </button>
-          <button className="nes-btn is-primary" onClick={onSave}>
+          <button
+            className="nes-btn is-primary"
+            onClick={onSave}
+            style={{
+              border: "1px solid black",
+              padding: 10,
+              width: 100,
+              borderRadius: 15,
+              cursor: "pointer",
+            }}
+          >
             Save
           </button>
         </div>
@@ -165,14 +211,31 @@ function App() {
             style={{
               display: "flex",
               gap: 24,
-              marginLeft: "22%",
+              marginLeft: "28%",
               marginBottom: 20,
             }}
           >
-            <button className="nes-btn" onClick={() => setDraft({})}>
+            <button
+              className="nes-btn"
+              style={{
+                border: "1px solid black",
+                padding: 10,
+                width: 100,
+                borderRadius: 15,
+                cursor: "pointer",
+              }}
+              onClick={() => setDraft({})}
+            >
               Crear nota
             </button>
             <button
+              style={{
+                border: "1px solid black",
+                padding: 10,
+                width: 100,
+                borderRadius: 15,
+                cursor: "pointer",
+              }}
               className="nes-btn"
               onClick={() =>
                 setView((view) => (view === "active" ? "archived" : "active"))
