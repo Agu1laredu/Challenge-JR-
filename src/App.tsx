@@ -144,9 +144,15 @@ function App() {
   }
 
   return (
-    <>
+    <div
+      style={{
+        margin: " 200px auto",
+        border: "4px solid black",
+        width: "500px",
+      }}
+    >
       <main>
-        <div style={{ marginBottom: 24 }}>
+        <div style={{ textAlign: "center" }}>
           <h1>Mis Notas</h1>
         </div>
         <div
@@ -155,7 +161,14 @@ function App() {
             gap: 24,
           }}
         >
-          <div style={{ display: "flex", gap: 24 }}>
+          <div
+            style={{
+              display: "flex",
+              gap: 24,
+              marginLeft: "22%",
+              marginBottom: 20,
+            }}
+          >
             <button className="nes-btn" onClick={() => setDraft({})}>
               Crear nota
             </button>
@@ -187,7 +200,7 @@ function App() {
           />
         )}
       </main>
-    </>
+    </div>
   );
 }
 
